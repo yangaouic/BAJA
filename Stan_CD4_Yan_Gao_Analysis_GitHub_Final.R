@@ -547,8 +547,8 @@ chord<-sum(sqrt((g_grid[-length(gt)]-g_grid[-1])^2+0.05^2))
 Gt_mean_87<-round(chord,digits=2)
 Gt_mean_87 #10.51
 t_87 #10.4
-text(6, 13, expression(paste(italic(G(t)), " = 10.51", "; ", italic(t), " = 10.40",  " (death)") ))
 
+text(10, 13, expression(paste(hat(V)(t), " = 10.51", "; ",  italic(t)," = 10.40",  " (death)"  )))
 
 #Patient 447: ddI, death
 pat_447<-pbc_pats_extrem %>% filter(patient %in% "447")
@@ -573,7 +573,7 @@ chord<-sum(sqrt((g_grid[-length(gt)]-g_grid[-1])^2+0.05^2))
 Gt_mean_447<-round(chord,digits=2)
 Gt_mean_447 #12.74
 t_447 #12.47
-text(6, 13, expression(paste(italic(G(t)), " = 12.74", "; ", italic(t), " = 12.47",  " (death)") ))
+text(10, 13, expression(paste(hat(V)(t), " = 12.74", "; ", italic(t), " = 12.47",  " (death)") ))
 
 #Patient 121: ddI, censor
 pat_121<-pbc_pats_extrem %>% filter(patient %in% "121")
@@ -599,7 +599,7 @@ chord<-sum(sqrt((g_grid[-length(gt)]-g_grid[-1])^2+0.05^2))
 Gt_mean_121<-round(chord,digits=2)
 Gt_mean_121 #12.68 
 t_121 #12.50
-text(6, 13, expression(paste(italic(G(t)), " = 12.68", "; ", italic(t), " = 12.50",  " (censor)") ))
+text(10, 13, expression(paste(hat(V)(t), " = 12.68", "; ", italic(t), " = 12.50",  " (censor)") ))
 
 #Paitent 390: ddC, censor
 pat_390<-pbc_pats_extrem %>% filter(patient %in% "390")
@@ -624,7 +624,7 @@ chord<-sum(sqrt((g_grid[-length(gt)]-g_grid[-1])^2+0.05^2))
 Gt_mean_390<-round(chord,digits=2)
 Gt_mean_390 #12.61
 t_390 #12.2
-text(6, 8, expression(paste(italic(G(t)), " = 12.61", "; ", italic(t), " = 12.20",  " (censor)") ))
+text(6, 8, expression(paste(hat(V)(t), " = 12.61", "; ", italic(t), " = 12.20",  " (censor)") ))
 
 #######################################################
 ## Pair Plots for Diagnosis                          ##
@@ -655,8 +655,3 @@ traceplot(fitmod, pars = c("sigma_u"))
 ######################################################
 ## End of Program                                    #
 ######################################################  
-
-
-
-
-
